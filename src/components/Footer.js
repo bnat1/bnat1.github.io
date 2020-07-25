@@ -14,7 +14,7 @@ class Footer extends React.Component {
                 </ul>
                 <ul className="copyright">
                     <li>&copy; Nat Baylon</li>
-                    <li>Developed using <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://html5up.net">HTML5 UP</a></li>
+                    <li>Built using <a href="https://www.gatsbyjs.org">Gatsby</a> and <a href="https://html5up.net">HTML5 UP</a></li>
                 </ul>
             </section>
         )

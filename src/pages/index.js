@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 
 import picNatbaylon from '../assets/images/natbaylon.jpg'
 import picNatbaylon2 from '../assets/images/natbaylon.png'
+import picNatBea from '../assets/images/natbea.jpg'
 import picHealytics from '../assets/images/healytics.jpg'
 import picSbd from '../assets/images/sbd.png'
 import picDotru from '../assets/images/dotru.png'
@@ -34,10 +35,10 @@ class Homepage extends React.Component {
                                 For the past three years, I have been working remotely with <a href="https://www.healytics.com/" rel="noopener noreferrer">Healytics</a>, a Baltimore-based health information management company, 
                                 where I continue to sharpen my skills while doing what I enjoy the most.
                             </p>
-                            <p>You can see a PDF of my resumé <a href="#">here</a>.</p>
+                            <p>You can see a PDF of my resumé <a href="/NathanielBaylonResume.pdf" target="_blank">here</a>.</p>
                         </div>
                         <div className="col-6">
-                            <span className="image fit"><img src={picNatbaylon2} alt="" /></span>
+                            <span className="image fit"><img src={picNatBea} alt="" /></span>
                         </div>
                     </div>
                 </section>
