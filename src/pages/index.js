@@ -2,13 +2,10 @@ import React from "react";
 import Helmet from "react-helmet";
 import Layout from '../components/layout';
 
-import picNatbaylon from '../assets/images/natbaylon.jpg'
-import picNatbaylon2 from '../assets/images/natbaylon.png'
 import picNatBea from '../assets/images/natbea.jpg'
 import picHealytics from '../assets/images/healytics.jpg'
 import picSbd from '../assets/images/sbd.png'
 import picDotru from '../assets/images/dotru.png'
-import pic01 from '../assets/images/pic01.jpg'
 
 class Homepage extends React.Component {
     render() {
