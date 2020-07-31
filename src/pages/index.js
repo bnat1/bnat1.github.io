@@ -29,7 +29,7 @@ class Homepage extends React.Component {
                                 I started getting interested in web development and coding in middle school, when I had the opportunity to do some programming in an informatics class, and since then, I was hooked. 
                                 During my university years, I attended several hackathons with my friends, and we even placed 2<sup>nd</sup> in HackUMBC 2016! 
                                 A year later, I graduated with Honors in Computer Science at the University of Maryland, Baltimore County in 2017. 
-                                For the past three years, I have been working remotely with <a href="https://www.healytics.com/" rel="noopener noreferrer">Healytics</a>, a Baltimore-based health information management company, 
+                                For the past two years, I have been working remotely with <a href="https://www.healytics.com/" rel="noopener noreferrer">Healytics</a>, a Baltimore-based health information management company, 
                                 where I continue to sharpen my skills while doing what I enjoy the most.
                             </p>
                             <p>You can see a PDF of my resumé <a href="/NathanielBaylonResume.pdf" target="_blank">here</a>.</p>
