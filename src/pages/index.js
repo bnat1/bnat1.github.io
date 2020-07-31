@@ -88,7 +88,7 @@ class Homepage extends React.Component {
                                 On the server side, I like to use Node + Express because of its speedy request handling and npm's wide variety of available libraries. 
                                 When the back-end needs to be scaled up to multiple processes, I use PM2.
                                 While Javascript isn't particularly good at computationally heavy tasks (reading and processing large files or math for example),
-                                it handles other situations very well, such as handling requests that require database reads / writes. When heavy lifting is needing,
+                                it handles other situations very well, such as handling requests that require database reads / writes. When heavy lifting is needed,
                                 this work can be offloaded to more suitable language, spawning a Java or C++ process for example. 
                             </p>
                             <p>
