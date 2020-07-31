@@ -2,13 +2,10 @@ import React from "react";
 import Helmet from "react-helmet";
 import Layout from '../components/layout';
 
-import picNatbaylon from '../assets/images/natbaylon.jpg'
-import picNatbaylon2 from '../assets/images/natbaylon.png'
 import picNatBea from '../assets/images/natbea.jpg'
 import picHealytics from '../assets/images/healytics.jpg'
 import picSbd from '../assets/images/sbd.png'
 import picDotru from '../assets/images/dotru.png'
-import pic01 from '../assets/images/pic01.jpg'
 
 class Homepage extends React.Component {
     render() {
@@ -38,7 +35,12 @@ class Homepage extends React.Component {
                             <p>You can see a PDF of my resumé <a href="/NathanielBaylonResume.pdf" target="_blank">here</a>.</p>
                         </div>
                         <div className="col-6">
-                            <span className="image fit"><img src={picNatBea} alt="" /></span>
+                            <span className="image fit">
+                                <figure>
+                                    <img src={picNatBea} alt="" />
+                                    <figcaption>My wife and me in Huelma, Jaen</figcaption>
+                                </figure>
+                            </span>
                         </div>
                     </div>
                 </section>
@@ -83,11 +85,11 @@ class Homepage extends React.Component {
                                 I currently use Nginx to achieve this since it can serve front-end builds and reverse-proxy HTTP requests to RESTful back-ends.
                             </p>
                             <p>
-                                On the server side, I like to use Node + Express because of its speedy response and npm's wide variety of available libraries. 
-                                If needed, I scale the back-end up to multiple processes using PM2. 
+                                On the server side, I like to use Node + Express because of its speedy request handling and npm's wide variety of available libraries. 
+                                When the back-end needs to be scaled up to multiple processes, I use PM2.
                                 While Javascript isn't particularly good at computationally heavy tasks (reading and processing large files or math for example),
                                 it handles other situations very well, such as handling requests that require database reads / writes. When heavy lifting is needing,
-                                this work can be offloaded to more suitable language, spawning a Java or C++ process for example.
+                                this work can be offloaded to more suitable language, spawning a Java or C++ process for example. 
                             </p>
                             <p>
                                 Relational data is often used by applications so I often choose to use Postgres along with a good ORM such as Sequelize in these cases. 
