@@ -32,13 +32,12 @@ class Homepage extends React.Component {
                                 For the past two years, I have been working remotely with <a href="https://www.healytics.com/" rel="noopener noreferrer">Healytics</a>, a Baltimore-based health information management company, 
                                 where I continue to sharpen my skills while doing what I enjoy the most.
                             </p>
-                            <p>You can see a PDF of my resumé <a href="/NathanielBaylonResume.pdf" target="_blank">here</a>.</p>
                         </div>
                         <div className="col-6">
                             <span className="image fit">
                                 <figure>
                                     <img src={picNatBea} alt="" />
-                                    <figcaption>My wife and me in Huelma, Jaen</figcaption>
+                                    <figcaption>My wife and me in Huelma, Jaén</figcaption>
                                 </figure>
                             </span>
                         </div>
@@ -82,23 +81,26 @@ class Homepage extends React.Component {
                             </p>
                             <p>
                                 I am of the mindset that the front-end should be decoupled from the back-end to allow the two to be developed, built, and deployed separately. 
-                                I currently use Nginx to achieve this since it can serve front-end builds and reverse-proxy HTTP requests to RESTful back-ends.
+                                I currently use Nginx to achieve this since it can serve front-end builds and reverse-proxy HTTP requests to RESTful back-ends. Compared with Apache,
+                                Nginx makes a much better use of threads, is event driven, asynchronous, and non-blocking, making it able to handle a larger throughput.
                             </p>
                             <p>
                                 On the server side, I like to use Node + Express because of its speedy request handling and npm's wide variety of available libraries. 
                                 When the back-end needs to be scaled up to multiple processes, I use PM2.
                                 While Javascript isn't particularly good at computationally heavy tasks (reading and processing large files or math for example),
-                                it handles other situations very well, such as handling requests that require database reads / writes. When heavy lifting is needed,
-                                this work can be offloaded to more suitable language, spawning a Java or C++ process for example. 
+                                it handles other use cases very well, such as handling requests that require database querying. And when heavy lifting is needed,
+                                this work can be offloaded to more suitable language by spawning a Java or C++ process for example, giving the best of both worlds: 
+                                fast request handling with strong processing power. 
                             </p>
                             <p>
-                                Relational data is often used by applications so I often choose to use Postgres along with a good ORM such as Sequelize in these cases. 
-                                But when working with non-relational data or when rapidly prototyping something, Mongo is often simpler to use.
+                                When working with relational data, I typically choose Postgres because it offers many features and can execute complicated queries and large datasets well. 
+                                I use a good ORM in applications to query the database, such as Sequelize, to make the code more manageable and readable.
+                                When working with non-relational data or when rapidly prototyping an application, MongoDB is my go-to because it is very developer friendly.
                             </p>
                             <p>
                                 In my local development environment, I use Ubuntu or a similar Linux distribution, VS Code as my text editor, and git + Github / Bitbucket for source control. 
                                 When working with teams, I have used Jira and Confluence to manage tasking and documentation respectively.
-                            </p>  
+                            </p>
                         </div>
                     </div>
                 </section>
@@ -178,7 +180,11 @@ class Homepage extends React.Component {
                         <header className="major">
                             <h2>Want to get in touch?</h2>
                         </header>
-                        <p>Send me an email at nwbaylon@gmail.com<br/> Call / WhatsApp me at +34 644 143 143</p>
+                        <p>
+                            Email me at nwbaylon@gmail.com<br/> 
+                            Call / WhatsApp me at +34 644 143 143<br/>
+                            You can find a PDF of my resume <a href="/NathanielBaylonResume.pdf" target="_blank">here</a>.
+                        </p>
                     </div>
                 </section>
             </Layout>

@@ -10,8 +10,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-starter-default',
-        short_name: 'starter',
+        name: 'natbaylon.com',
+        short_name: 'Nat Baylon\'s website',
         start_url: '/',
         background_color: '#663399',
         theme_color: '#663399',
