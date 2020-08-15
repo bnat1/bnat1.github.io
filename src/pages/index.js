@@ -92,7 +92,7 @@ class Homepage extends React.Component {
                                 I offload this work to Java or C++, allowing both fast request handling and fast data processing. 
                             </p>
                             <p>
-                                When working with relational data, I typically choose Postgres because it offers many features and can execute complicated queries and large datasets well. 
+                                When working with relational data, I typically choose Postgres as the database because it offers many features, and can handle complicated queries and handle large datasets well. 
                                 I use a good ORM in applications to query the database, such as Sequelize, to make the code more manageable and readable.
                                 When working with non-relational data or when rapidly prototyping an application, MongoDB is my go-to because it is very developer friendly.
                             </p>
