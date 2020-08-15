@@ -89,8 +89,7 @@ class Homepage extends React.Component {
                                 When the back-end needs to be scaled up to multiple processes, I use PM2.
                                 While Javascript isn't particularly good at computationally heavy tasks (reading and processing large files or math for example),
                                 it handles other use cases very well, such as handling requests that require database querying. And when heavy lifting is needed,
-                                this work can be offloaded to more suitable language by spawning a Java or C++ process for example, giving the best of both worlds: 
-                                fast request handling with strong processing power. 
+                                I offload this work to Java or C++, allowing both fast request handling and fast data processing. 
                             </p>
                             <p>
                                 When working with relational data, I typically choose Postgres because it offers many features and can execute complicated queries and large datasets well. 
