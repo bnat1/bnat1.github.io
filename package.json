@@ -4,8 +4,6 @@
   "version": "1.0.0",
   "author": "Nat Baylon",
   "dependencies": {
-    "devicon-react": "^1.1.1",
-    "devicon-react-svg": "^0.2.2",
     "gatsby": "^2.15.14",
     "gatsby-plugin-manifest": "^2.2.16",
     "gatsby-plugin-offline": "^3.0.6",

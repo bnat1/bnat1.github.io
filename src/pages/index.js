@@ -22,14 +22,14 @@ class Homepage extends React.Component {
                                 <h2>About Me</h2>
                             </header>
                             <p>
-                                My name is Nat Baylon. I am a full stack developer with five years of experience working in agile teams. 
+                                My name is Nat Baylon. I am a full stack software engineer with five years of experience working in agile teams. 
                                 I have lived and worked in Maryland for most of my life, but I am currently living in Granada, a beautiful city in the south of Spain, where my wife is from.
                             </p>
                             <p>
                                 I started getting interested in web development and coding in middle school, when I had the opportunity to do some programming in an informatics class, and since then, I was hooked. 
                                 During my university years, I attended several hackathons with my friends, and we even placed 2<sup>nd</sup> in HackUMBC 2016! 
                                 A year later, I graduated with Honors in Computer Science at the University of Maryland, Baltimore County in 2017. 
-                                For the past two years, I have been working remotely with <a href="https://www.healytics.com/" rel="noopener noreferrer">Healytics</a>, a Baltimore-based health information management company, 
+                                For the past three years, I have been working remotely with <a href="https://www.healytics.com/" rel="noopener noreferrer">Healytics</a>, a Baltimore-based health information management company, 
                                 where I continue to sharpen my skills while doing what I enjoy the most.
                             </p>
                         </div>
@@ -49,15 +49,23 @@ class Homepage extends React.Component {
                         <div className="col-6">
                             <ul className="major-icons">
                                 <li><span className="devicon devicon-react-original-wordmark colored"/></li>
+                                <li><span className="devicon devicon-html5-plain-wordmark colored"/></li>
+                                <li><span className="devicon devicon-css3-plain-wordmark colored"/></li>
                                 <li><span className="devicon devicon-nginx-plain colored"/></li>
                                 <li><span className="devicon devicon-nodejs-plain-wordmark colored"/></li>
-                                <li><span className="devicon devicon-express-original-wordmark"/></li>
+                                <li><span className="devicon devicon-express-original-wordmark "/></li>
                                 <li><span className="devicon devicon-java-plain-wordmark colored"/></li>
+                                <li><span className="devicon devicon-cplusplus-line-wordmark colored"/></li>
+                                <li><span className="devicon devicon-go-line "/></li>
                                 <li><span className="devicon devicon-python-plain-wordmark colored"/></li>
                                 <li><span className="devicon devicon-postgresql-plain-wordmark colored"/></li>
                                 <li><span className="devicon devicon-mongodb-plain-wordmark colored"/></li>
                                 <li><span className="devicon devicon-git-plain-wordmark colored"/></li>
+                                <li><span className="devicon devicon-bitbucket-plain-wordmark colored"/></li>
+                                <li><span className="devicon devicon-github-plain-wordmark colored"/></li>
                                 <li><span className="devicon devicon-linux-plain colored"/></li>
+                                <li><span className="devicon devicon-docker-plain-wordmark colored"/></li>
+                                <li><span className="devicon devicon-amazonwebservices-plain-wordmark colored"/></li>
                                 {/* <li><span className="icon style1 major fa-code"></span></li>
                                 <li><span className="icon style2 major fa-database"></span></li>
                                 <li><span className="icon style3 major fa-cloud"></span></li>
@@ -73,32 +81,61 @@ class Homepage extends React.Component {
                             <p>
                                 Here's a walkthrough of the technologies I most commonly use when developing applications:
                             </p>
+                            <header>
+                                <h3>Front-end</h3>
+                            </header>
                             <p>
-                                In the front-end, I have lately been developing single page applications (SPAs) with React. 
+                                II have lately been developing single page applications (SPAs) using React. 
                                 I like using Bootstrap or Semantic UI for styling / componentry, and Axios.js as a RESTful HTTP client. 
                                 To manage the state of componentry, I started out using Redux, 
                                 but later switched to using the built-in Context API to reduce boiler-plate code and to improve maintainability.
                             </p>
+                            <header>
+                                <h3>Front-end Server & API Gateway</h3>
+                            </header>
                             <p>
                                 I am of the mindset that the front-end should be decoupled from the back-end to allow the two to be developed, built, and deployed separately. 
                                 I currently use Nginx to achieve this since it can serve front-end builds and reverse-proxy HTTP requests to RESTful back-ends. Compared with Apache,
                                 Nginx makes a much better use of threads, is event driven, asynchronous, and non-blocking, making it able to handle a larger throughput.
                             </p>
+                            <header>
+                                <h3>Back-end</h3>
+                            </header>
                             <p>
-                                On the server side, I like to use Node + Express because of its speedy request handling and npm's wide variety of available libraries. 
-                                When the back-end needs to be scaled up to multiple processes, I use PM2.
-                                While Javascript isn't particularly good at computationally heavy tasks (reading and processing large files or math for example),
-                                it handles other use cases very well, such as handling requests that require database querying. And when heavy lifting is needed,
-                                I offload this work to Java or C++, allowing both fast request handling and fast data processing. 
+                                On the server side, I like to handle requests using Node Express. 
+                                When the back-end needs to be scaled up, I use PM2 to allow the application to run on multiple processes. 
+                                In cloud environments, I have used AWS Elastic Beanstalk to horizontally scale the application as well.
+                                Due to its single threaded asynchronous nature, Node.js is particularly good at handling requests that require little processing by Node itself, 
+                                such as fetching database data, and these are the common types of request. 
+                                But if more computationally heavy tasks need to be handled (processing large files or math for example),
+                                I asynchronously spawn a Java or C++ process, allowing Node's thread to handle other requests while the spawned process to do the heavy lifting.
+                                I am beginning to learn Go because of its ability to handle the heavier tasks well, 
+                                but I suspect that in the end, I will stick to Node to handle the most common back-end usecases because the performance is roughly the same for these usecases between Node and Go, 
+                                NPM has many powerful libraries, and Node is faster to develop with.
                             </p>
+                            <header>
+                                <h3>Database</h3>
+                            </header>
                             <p>
-                                When working with relational data, I typically choose Postgres as the database because it offers many features, and can handle complicated queries and large datasets well. 
+                                When working with relational data, I typically choose Postgres as the database because it offers many features and can handle complicated queries and large datasets well. 
                                 I use a good ORM in applications to query the database, such as Sequelize, to make the code more manageable and readable.
                                 When working with non-relational data or when rapidly prototyping an application, MongoDB is my go-to because it is very developer friendly.
                             </p>
+                            <header>
+                                <h3>Local Development Environment</h3>
+                            </header>
                             <p>
-                                In my local development environment, I use Ubuntu or a similar Linux distribution, VS Code as my text editor, and git + Github / Bitbucket for source control. 
-                                When working with teams, I have used Jira and Confluence to manage tasking and documentation respectively.
+                                In my local development environment, I use Ubuntu or a similar Linux distribution, VS Code as my text editor, and git and Github / Bitbucket for source control. 
+                                And when working with teams, I have used Jira and Confluence to manage tasking and documentation respectively.
+                            </p>
+                            <header>
+                                <h3>Building & Deploying</h3>
+                            </header>
+                            <p>
+                                Github and Bitbucket both have plugins available for triggering build servers upon the merge of pull requests. 
+                                I like to configure it so that merging into the master branch triggers Jenkins to build the project. 
+                                I use webpack for minifying JavaScript projects, and Maven for building Java projects, 
+                                and I use Docker to containerize the project. I'm currently learning how to Kubernetes to make deployment easier.
                             </p>
                         </div>
                     </div>
@@ -114,7 +151,7 @@ class Homepage extends React.Component {
 
                         <div className="col-4">
                             <span className="image fit"><img src={picHealytics} alt="" /></span>
-                            <h3>Full Stack Developer</h3>
+                            <h3>Full Stack Engineer</h3>
                             <p>
                                 Healytics, Inc. Cockeysville, MD <br/> 
                                 June 2017 - Present
@@ -138,7 +175,7 @@ class Homepage extends React.Component {
                         </div>
                         <div className="col-4">
                             <span className="image fit"><img src={picDotru} alt="" /></span>
-                            <h3>Full Stack Developer & Scraper</h3>
+                            <h3>Full Stack Engineer & Scraper</h3>
                             <p>
                                 Dotru, Inc. Columbia, MD<br/>
                                 May 2016 - May 2017
@@ -182,7 +219,7 @@ class Homepage extends React.Component {
                         <p>
                             Email me at nwbaylon@gmail.com<br/> 
                             Call / WhatsApp me at +34 644 143 143<br/>
-                            You can find a PDF of my resume <a href="/NathanielBaylonResume.pdf" target="_blank">here</a>.
+                            You can find a PDF of my resume <a href="/NathanielBaylonResume.pdf" target="_blank">here</a>
                         </p>
                     </div>
                 </section>
