@@ -23,13 +23,14 @@ class Homepage extends React.Component {
                             </header>
                             <p>
                                 My name is Nat Baylon. I am a full stack software engineer with five years of experience working in agile teams. 
-                                I have lived and worked in Maryland for most of my life, but I am currently living in Granada, a beautiful city in the south of Spain, where my wife is from.
+                                I have lived and worked in Maryland for most of my life, but I am currently based in Granada, a beautiful city in the south of Spain, where my wife is from.
                             </p>
                             <p>
                                 I started getting interested in web development and coding in middle school, when I had the opportunity to do some programming in an informatics class, and since then, I was hooked. 
                                 During my university years, I attended several hackathons with my friends, and we even placed 2<sup>nd</sup> in HackUMBC 2016! 
-                                A year later, I graduated with Honors in Computer Science at the University of Maryland, Baltimore County in 2017. 
-                                For the past three years, I have been working remotely with <a href="https://www.healytics.com/" rel="noopener noreferrer">Healytics</a>, a Baltimore-based health information management company, 
+                                A year later, I graduated with honors in Computer Science at the University of Maryland, Baltimore County in 2017. 
+                                For the past few years, I have been traveling the world while working remotely as a Full Stack Software Engineer with <a href="https://www.healytics.com/" rel="noopener noreferrer">Healytics</a>, 
+                                a Baltimore-based health information management and genome processing company, 
                                 where I continue to sharpen my skills while doing what I enjoy the most.
                             </p>
                         </div>
@@ -85,7 +86,7 @@ class Homepage extends React.Component {
                                 <h3>Front-end</h3>
                             </header>
                             <p>
-                                II have lately been developing single page applications (SPAs) using React. 
+                                I have lately been developing single page applications (SPAs) using React. 
                                 I like using Bootstrap or Semantic UI for styling / componentry, and Axios.js as a RESTful HTTP client. 
                                 To manage the state of componentry, I started out using Redux, 
                                 but later switched to using the built-in Context API to reduce boiler-plate code and to improve maintainability.
@@ -105,13 +106,12 @@ class Homepage extends React.Component {
                                 On the server side, I like to handle requests using Node Express. 
                                 When the back-end needs to be scaled up, I use PM2 to allow the application to run on multiple processes. 
                                 In cloud environments, I have used AWS Elastic Beanstalk to horizontally scale the application as well.
-                                Due to its single threaded asynchronous nature, Node.js is particularly good at handling requests that require little processing by Node itself, 
-                                such as fetching database data, and these are the common types of request. 
+                                Due to its single threaded asynchronous nature, Node.js is particularly good at handling the most common types of requests,
+                                such as running queries on a database or making additional RESTful calls. 
                                 But if more computationally heavy tasks need to be handled (processing large files or math for example),
-                                I asynchronously spawn a Java or C++ process, allowing Node's thread to handle other requests while the spawned process to do the heavy lifting.
+                                I asynchronously spawn a Java or C++ process, allowing Node's thread to handle other requests while the spawned process does the heavy lifting.
                                 I am beginning to learn Go because of its ability to handle the heavier tasks well, 
-                                but I suspect that in the end, I will stick to Node to handle the most common back-end usecases because the performance is roughly the same for these usecases between Node and Go, 
-                                NPM has many powerful libraries, and Node is faster to develop with.
+                                but I suspect that in the end, I will stick to Node to handle the most common back-end use cases because it performs roughly as well as go for these cases.
                             </p>
                             <header>
                                 <h3>Database</h3>
@@ -132,10 +132,10 @@ class Homepage extends React.Component {
                                 <h3>Building & Deploying</h3>
                             </header>
                             <p>
-                                Github and Bitbucket both have plugins available for triggering build servers upon the merge of pull requests. 
-                                I like to configure it so that merging into the master branch triggers Jenkins to build the project. 
+                                Github and Bitbucket both have plugins available for triggering build servers on the event merging of pull requests, which
+                                I like to configure so that merging into the master branch triggers Jenkins to build the project. 
                                 I use webpack for minifying JavaScript projects, and Maven for building Java projects, 
-                                and I use Docker to containerize the project. I'm currently learning how to Kubernetes to make deployment easier.
+                                and I use Docker to containerize the parts of the project. 
                             </p>
                         </div>
                     </div>
@@ -158,18 +158,24 @@ class Homepage extends React.Component {
                             </p>
                             <ul className="experience-description">
                                 <li>
-                                    Created and maintained a suite of health research applications that integrate directly
-                                    with hospital Electronic Health Records (EHRs).
+                                    Created and maintained a suite of HIPPA compliant health data storage, messaging,
+                                    and research applications that integrate directly with Electronic Health Records
+                                    (EHRs).
                                 </li> 
                                 <li>
-                                    Developed a genomic processing pipeline in order to help medical institutions identify
-                                    genetic variants, detect diseases, and avoid adverse drug-gene interactions.
+                                    Researched, designed, and developed a genomics processing pipeline that helps medical
+                                    institutions identify genetic variants, detect diseases, and avoid adverse drug-gene
+                                    interactions.
                                 </li>
                                 <li>
-                                    Secured health records, ensuring that patients control access to their records.
+                                    Transformed and maintained a messaging platform based on Rocket.Chat, created bots
+                                    to help departments within health institutions respond to messages.
                                 </li>
                                 <li>
-                                    Technologies used: React.js, Semantic UI, Node Express, Java, PostgreSQL, Accumulo.
+                                    Responded to help desk tickets and feature requests from medical institutions.
+                                </li>
+                                <li>
+                                    Developed tooling to manage internal control processes and deployments
                                 </li>
                             </ul>
                         </div>
@@ -182,11 +188,17 @@ class Homepage extends React.Component {
                             </p>
                             <ul className="experience-description">
                                 <li>
-                                    Built a restful application to manage web scraping and used this application to
-                                    configure and schedule hundreds of scraping jobs.
+                                    Maintained a headless web scraper that visits websites, performs clicks, and extracts data using CSS selectors.
                                 </li>
                                 <li>
-                                    Technolgies used: Angular.js, Twitter Bootstrap, Node Express, MongoDB, PhantomJS, and RabbitMQ.
+                                    Built a RESTful application that assists in configuring the steps that the web scraper takes and the locations of the
+                                    data of interest to be extracted.
+                                </li>
+                                <li>
+                                    Used a RabbitMQ work queue to encapsu  late and execute scraping tasks.
+                                </li>
+                                <li>
+                                    Configured the scraping of hundreds of web pages.
                                 </li>
                             </ul>
                         </div>
@@ -201,9 +213,6 @@ class Homepage extends React.Component {
                                 <li>
                                     Developed a variety of Sharepoint workflows to expedite employee training module
                                     completion.
-                                </li>
-                                <li>
-                                    Technologies used: Sharepoint, Visual Basic.
                                 </li>
                             </ul>
                         </div>
