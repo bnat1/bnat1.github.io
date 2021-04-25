@@ -6,6 +6,11 @@ import picNatBea from '../assets/images/natbea.jpg'
 import picHealytics from '../assets/images/healytics.jpg'
 import picSbd from '../assets/images/sbd.png'
 import picDotru from '../assets/images/dotru.png'
+import rabbitmqIcon from '../assets/images/rabbitmq.svg'
+import jiraIcon from '../assets/images/jira.png'
+import bashIcon from '../assets/images/bash.png'
+import jenkinsIcon from '../assets/images/jenkins.png'
+import semanticIcon from '../assets/images/semantic.png'
 
 class Homepage extends React.Component {
     render() {
@@ -22,16 +27,15 @@ class Homepage extends React.Component {
                                 <h2>About Me</h2>
                             </header>
                             <p>
-                                My name is Nat Baylon. I am a full stack software engineer with five years of experience working in agile teams. 
+                                My name is Nat Baylon. I am a full stack software engineer with six years of experience working in agile development teams. 
                                 I have lived and worked in Maryland for most of my life, but I am currently based in Granada, a beautiful city in the south of Spain, where my wife is from.
                             </p>
                             <p>
-                                I started getting interested in web development and coding in middle school, when I had the opportunity to do some programming in an informatics class, and since then, I was hooked. 
-                                During my university years, I attended several hackathons with my friends, and we even placed 2<sup>nd</sup> in HackUMBC 2016! 
-                                A year later, I graduated with honors in Computer Science at the University of Maryland, Baltimore County in 2017. 
+                                I started getting interested in web development as a teenager, when I had the opportunity to take programming classes in middle school and high school, and since then, programming has been prominent in my life
+                                During my university years, I attended several hackathons with my friends, and we placed 2<sup>nd</sup> in HackUMBC 2016 with a project involving controling sound and fractal patterns with a motion sensor.
+                                In 2017, I graduated with honors in Computer Science at the University of Maryland, Baltimore County. 
                                 For the past few years, I have been traveling the world while working remotely as a Full Stack Software Engineer with <a href="https://www.healytics.com/" rel="noopener noreferrer">Healytics</a>, 
-                                a Baltimore-based health information management and genome processing company, 
-                                where I continue to sharpen my skills while doing what I enjoy the most.
+                                a Baltimore-based health information management and genome processing company, where I continue to sharpen my skills while doing what I enjoy the most.
                             </p>
                         </div>
                         <div className="col-6">
@@ -52,6 +56,7 @@ class Homepage extends React.Component {
                                 <li><span className="devicon devicon-react-original-wordmark colored"/></li>
                                 <li><span className="devicon devicon-html5-plain-wordmark colored"/></li>
                                 <li><span className="devicon devicon-css3-plain-wordmark colored"/></li>
+                                <li><span><img src={semanticIcon} alt="" className="icon-svg" /></span></li>
                                 <li><span className="devicon devicon-nginx-plain colored"/></li>
                                 <li><span className="devicon devicon-nodejs-plain-wordmark colored"/></li>
                                 <li><span className="devicon devicon-express-original-wordmark "/></li>
@@ -62,11 +67,15 @@ class Homepage extends React.Component {
                                 <li><span className="devicon devicon-postgresql-plain-wordmark colored"/></li>
                                 <li><span className="devicon devicon-mongodb-plain-wordmark colored"/></li>
                                 <li><span className="devicon devicon-git-plain-wordmark colored"/></li>
-                                <li><span className="devicon devicon-bitbucket-plain-wordmark colored"/></li>
                                 <li><span className="devicon devicon-github-plain-wordmark colored"/></li>
-                                <li><span className="devicon devicon-linux-plain colored"/></li>
-                                <li><span className="devicon devicon-docker-plain-wordmark colored"/></li>
+                                <li><span className="devicon devicon-bitbucket-plain-wordmark colored"/></li>
+                                <li><span className="devicon devicon-confluence-plain-wordmark colored"/></li>
+                                <li><span><img src={jiraIcon} alt="" className="icon-svg-wide" /></span></li>
+                                <li><span className="devicon devicon-linux-plain colored" /></li>
+                                <li><span><img src={bashIcon} alt="" className="icon-svg-wide" /></span></li>
                                 <li><span className="devicon devicon-amazonwebservices-plain-wordmark colored"/></li>
+                                <li><span><img src={rabbitmqIcon} alt="" className="icon-svg" /></span></li>
+
                                 {/* <li><span className="icon style1 major fa-code"></span></li>
                                 <li><span className="icon style2 major fa-database"></span></li>
                                 <li><span className="icon style3 major fa-cloud"></span></li>
@@ -89,7 +98,7 @@ class Homepage extends React.Component {
                                 I have lately been developing single page applications (SPAs) using React. 
                                 I like using Bootstrap or Semantic UI for styling / componentry, and Axios.js as a RESTful HTTP client. 
                                 To manage the state of componentry, I started out using Redux, 
-                                but later switched to using the built-in Context API to reduce boiler-plate code and to improve maintainability.
+                                but later switched to using the built-in React Context API to reduce boiler-plate code and to improve maintainability.
                             </p>
                             <header>
                                 <h3>Front-end Server & API Gateway</h3>
@@ -104,14 +113,13 @@ class Homepage extends React.Component {
                             </header>
                             <p>
                                 On the server side, I like to handle requests using Node Express. 
-                                When the back-end needs to be scaled up, I use PM2 to allow the application to run on multiple processes. 
-                                In cloud environments, I have used AWS Elastic Beanstalk to horizontally scale the application as well.
+                                When request handling needs to be scaled up, I use PM2 to allow the application to run on multiple processes, and additionally, I have used Amazon Elastic Beanstalk to scale horizontally.
                                 Due to its single threaded asynchronous nature, Node.js is particularly good at handling the most common types of requests,
-                                such as running queries on a database or making additional RESTful calls. 
-                                But if more computationally heavy tasks need to be handled (processing large files or math for example),
-                                I asynchronously spawn a Java or C++ process, allowing Node's thread to handle other requests while the spawned process does the heavy lifting.
-                                I am beginning to learn Go because of its ability to handle the heavier tasks well, 
-                                but I suspect that in the end, I will stick to Node to handle the most common back-end use cases because it performs roughly as well as go for these cases.
+                                such as requests involving querying databases or making additional RESTful calls. 
+                                But if the back-end needs to handle more computationally heavy tasks (processing large files, machine learning, or math for example), I create a separate application in a suitable language
+                                that handles this processing, and use a messaging queue like RabbitMQ to allow the request handler to offload the work to a cluster of servers more suited to do the heavy lifting. This type of design pattern
+                                allows for great scalability. If the userbase expands, the messaging queue will fill up, meaning it will take more time for the worker servers to get to the tasks. And when this happens, it's 
+                                simple to add more servers to the work cluster.
                             </p>
                             <header>
                                 <h3>Database</h3>
@@ -119,13 +127,13 @@ class Homepage extends React.Component {
                             <p>
                                 When working with relational data, I typically choose Postgres as the database because it offers many features and can handle complicated queries and large datasets well. 
                                 I use a good ORM in applications to query the database, such as Sequelize, to make the code more manageable and readable.
-                                When working with non-relational data or when rapidly prototyping an application, MongoDB is my go-to because it is very developer friendly.
+                                When working with non-relational data or when rapidly prototyping an application, MongoDB with the Mongoose ODM as a is my go-to because it is very developer friendly.
                             </p>
                             <header>
                                 <h3>Local Development Environment</h3>
                             </header>
                             <p>
-                                In my local development environment, I use Ubuntu or a similar Linux distribution, VS Code as my text editor, and git and Github / Bitbucket for source control. 
+                                In my local development environment, I use Ubuntu or a similar Linux distribution, git and Github / Bitbucket for source control, VS Code as my text editor.
                                 And when working with teams, I have used Jira and Confluence to manage tasking and documentation respectively.
                             </p>
                             <header>
@@ -133,10 +141,19 @@ class Homepage extends React.Component {
                             </header>
                             <p>
                                 Github and Bitbucket both have plugins available for triggering build servers on the event merging of pull requests, which
-                                I like to configure so that merging into the master branch triggers Jenkins to build the project. 
-                                I use webpack for minifying JavaScript projects, and Maven for building Java projects, 
-                                and I use Docker to containerize the parts of the project. 
+                                I like to configure so that merging into the develop / main branch triggers Jenkins to build the project. 
+                                I use webpack for minifying JavaScript projects, and Maven for building Java projects, and I use Docker to containerize the deployment of parts of the project. 
                             </p>
+                            <ul className="major-icons">
+                                <li><span className="devicon devicon-docker-plain-wordmark colored" /></li>
+                                <li><span><img src={jenkinsIcon} alt="" className="icon-svg-wide" /></span></li>
+                                {/* <li><span className="icon style1 major fa-code"></span></li>
+                                <li><span className="icon style2 major fa-database"></span></li>
+                                <li><span className="icon style3 major fa-cloud"></span></li>
+                                <li><span className="icon style4 major fa-code-fork"></span></li>
+                                <li><span className="icon style5 major fa-desktop"></span></li>
+                                <li><span className="icon style6 major fa-server"></span></li> */}
+                            </ul>
                         </div>
                     </div>
                 </section>
